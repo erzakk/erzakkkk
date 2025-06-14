@@ -167,7 +167,6 @@ nav ul li a:hover {
 }
 
 .product-card {
-    background: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -312,14 +311,16 @@ form button {
     border-top: 1px solid #444;
 }
 .silver-color-rings {
-    background: url('img/header1.avif') center/cover no-repeat;
-    color: white; /* Якщо текст має бути світлим на темному фоні */
+    background: url('img/111.jpg') center/cover no-repeat;
+    color: white;
     height: 300px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     padding-bottom: 20px;
     position: relative;
+    border-radius: 8px; /* Додано для узгодженості з іншими елементами */
+    overflow: hidden; /* Щоб забезпечити обрізання закруглених кутів */
 }
 
 .silver-color-rings::before {
@@ -330,9 +331,13 @@ form button {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.3); /* Затемнення для кращого читання тексту */
+    z-index: 0; /* Забезпечуємо, що псевдоелемент буде під текстом */
 }
 
 .silver-color-rings .product-title {
     position: relative;
     z-index: 1;
+    text-align: center; /* Для кращого вирівнювання тексту */
+    width: 100%; /* Щоб текст займав всю ширину */
+    padding: 20px; /* Відступи для тексту */
 }
