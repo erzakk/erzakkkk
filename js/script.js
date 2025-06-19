@@ -166,3 +166,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// Додати на початок вашого існуючого скрипта
+const themeToggle = document.getElementById('themeToggle');
+
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+    localStorage.setItem('siteTheme', theme);
+}
+
+// Автоматичне визначення системної теми
+const systemTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const savedTheme = localStorage.getItem('siteTheme') || systemTheme;
+applyTheme(savedTheme);
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-mode');
+        applyTheme(isDark ? 'light' : 'dark');
+    });
+}
+
+// Слухач змін системної теми
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('siteTheme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+    }
+});

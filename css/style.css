@@ -36,9 +36,11 @@ body {
 header {
     background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    position: fixed; /* Фіксуємо header */
     width: 100%;
-    z-index: 100;
+    top: 0;
+    left: 0;
+   
 }
 
 header .container {
@@ -340,4 +342,122 @@ form button {
     text-align: center; /* Для кращого вирівнювання тексту */
     width: 100%; /* Щоб текст займав всю ширину */
     padding: 20px; /* Відступи для тексту */
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .logo h1,
+body.dark-mode nav ul li a,
+body.dark-mode .theme-btn {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #a0a0a0;
+}
+
+body.dark-mode .product-card,
+body.dark-mode .benefit-item,
+body.dark-mode .category-item {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .featured {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .footer-section ul li a,
+body.dark-mode .footer-section p {
+    color: #b0b0b0;
+}
+
+body.dark-mode .btn {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #4a4a4a;
+}
+
+body.dark-mode .price,
+body.dark-mode .product-card p {
+    color: #b0b0b0;
+}
+header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Фіксуємо header */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Забезпечуємо, щоб header був поверх інших елементів */
+    padding-right: 70px; /* Залишаємо місце для кнопки теми */
+}
+
+.theme-btn {
+    position: absolute; /* Абсолютне позиціонування відносно header */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1001; /* Вище за header */
+}
+
+.theme-btn:hover {
+    transform: translateY(-50%) scale(1.1) rotate(30deg);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для темної теми */
+body.dark-mode header {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .theme-btn {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .theme-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Основні стилі для контенту, щоб він не ховався під header */
+main {
+    margin-top: 80px; /* Відступ рівний висоті header */
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .theme-btn {
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
 }
