@@ -1,20 +1,20 @@
 [
     {
-        "title": "Каблучка",
-        "price": 10000,
-        "image": "img1.jpg",
-        "description":"Тонке срібне кільце з гравіюванням"
+        "title": "SILVER POT SINGLEY",
+        "price": 89.99,
+        "image": "1.webp",
+        "description":"Thin silver ring with engraving"
     },
     {
-        "title": "Каблучка",
-        "price": 15000,
-        "image": "im2.jpg",
-        "description":"Позолочене"
+        "title": "Silver Color Rings",
+        "price": 109.99,
+        "image": "2.webp",
+        "description":"Gold-plated or blackened silver"
     },
     {
-        "title": "Каблучка",
-        "price":30000,
-        "image": "img3.jpg",
-        "description":"Елегантне кільце-кільце з деталями"
+        "title": "Circlet",
+        "price": 79.99,
+        "image": "3.webp",
+        "description":"Elegant hoop ring with details"
     }
 ]
